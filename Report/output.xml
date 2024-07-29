@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-29T15:49:57.056927" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase" source="C:\Users\55119\Documents\waproject\Tests\TestCase.robot">
+<kw name="Open Browser To Register Page" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:49:59.903678" level="INFO">Opening browser 'Chrome' to base url 'https://www.mercadolivre.com.br/hub/registration?from_landing=true&amp;contextual=unified_normal&amp;redirect_url=https%3A%2F%2Fwww.mercadolivre.com.br%2F&amp;entity=no_apply#nav-header'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-29T15:49:59.902682" elapsed="17.617451"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-29T15:50:17.529129" elapsed="0.385434"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//button[@id="hub-item-button"]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:17.919560" elapsed="1.050184"/>
+</kw>
+<status status="PASS" start="2024-07-29T15:49:59.886421" elapsed="19.084570"/>
+</kw>
+<test id="s1-t1" name="Inserir Email Com Credenciais Inválidas" line="11">
+<kw name="Input Email With Invalid Data" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:18.999231" level="INFO">Clicking button '//button[@id="hub-item-button"]'.</msg>
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:18.995992" elapsed="1.811744"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="enter-email-input"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:20.808738" elapsed="0.096127"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:20.913877" level="INFO">Typing text 'gustavo.com' into text field '//input[@id="enter-email-input"]'.</msg>
+<arg>//input[@id="enter-email-input"]</arg>
+<arg>gustavo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:20.907873" elapsed="2.060499"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:28.369522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:50:28.378750" level="FAIL">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</msg>
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:50:22.971369" elapsed="5.792548">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-29T15:50:18.991991" elapsed="9.776932">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:50:28.781921" elapsed="0.001001"/>
+</kw>
+<doc>Verifica se é possivel adicionar um email invalido.</doc>
+<status status="FAIL" start="2024-07-29T15:50:18.980992" elapsed="9.808924">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Inserir Email Com Credenciais Validas" line="16">
+<kw name="Input Email With Valid Data" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="enter-email-input"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:28.816937" elapsed="0.070273"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:28.890926" level="INFO">Typing text 'alcantara.dev95@gmail.com' into text field '//input[@id="enter-email-input"]'.</msg>
+<arg>//input[@id="enter-email-input"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:28.888536" elapsed="0.941790"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//button[@id=":R1td9:"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:29.832329" elapsed="0.067517"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:29.901846" level="INFO">Clicking button '//button[@id=":R1td9:"]'.</msg>
+<arg>//button[@id=":R1td9:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:29.900844" elapsed="0.642846"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:36.786861" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:50:36.788869" level="FAIL">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</msg>
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:50:30.547688" elapsed="6.251520">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-29T15:50:28.807915" elapsed="7.994286">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:50:36.806203" elapsed="0.001001"/>
+</kw>
+<doc>Verifica se é possivel adicionar um email valido</doc>
+<status status="FAIL" start="2024-07-29T15:50:28.805662" elapsed="8.006546">Element '//button[@id="hub-item-button"]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t3" name="Validar Nome E Sobrenome Em Branco" line="21">
+<kw name="Input Name And Lastname With Empty Data" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:36.887252" level="INFO">Clicking button '//button[@id="hub-item-button"]'.</msg>
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:36.880241" elapsed="1.691363"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="firstName"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:38.575607" elapsed="0.098284"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:38.680894" level="INFO">Clicking button '//button[@id=":R3p:"]'.</msg>
+<arg>//button[@id=":R3p:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:38.676891" elapsed="0.885466"/>
+</kw>
+<status status="PASS" start="2024-07-29T15:50:36.870241" elapsed="2.695114"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:40.021086" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-29T15:50:39.572916" elapsed="0.450424"/>
+</kw>
+<doc>Verifica se é possivel progredir com os campos de Nome e Sobrenome em Branco</doc>
+<status status="PASS" start="2024-07-29T15:50:36.835506" elapsed="3.188835"/>
+</test>
+<test id="s1-t4" name="Inserir Nome E Sobrenome Com Credenciais Validas" line="26">
+<kw name="Input Name And Lastname With Valid Data" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:40.056481" level="INFO">Typing text 'Gustavo' into text field '//input[@id="firstName"]'.</msg>
+<arg>//input[@id="firstName"]</arg>
+<arg>${FIRSTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:40.051482" elapsed="0.803809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:40.860292" level="INFO">Typing text 'Tester' into text field '//input[@id="lastName"]'.</msg>
+<arg>//input[@id="lastName"]</arg>
+<arg>${LASTNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:40.857289" elapsed="0.652306"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:41.516599" level="INFO">Clicking button '//button[@id=":R3p:"]'.</msg>
+<arg>//button[@id=":R3p:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:41.512594" elapsed="0.434792"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:41.948390" elapsed="5.141255"/>
+</kw>
+<status status="PASS" start="2024-07-29T15:50:40.044487" elapsed="7.046461"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:47.523004" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-29T15:50:47.099954" elapsed="0.424047"/>
+</kw>
+<doc>Verifica se é possivel adicionar nome e sobrenome validos</doc>
+<status status="PASS" start="2024-07-29T15:50:40.033753" elapsed="7.495833"/>
+</test>
+<test id="s1-t5" name="Inserir Numero De Telefone Invalido" line="31">
+<kw name="Input Invalid Phone Number" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:47.561354" level="INFO">Clicking button '//button[@id="hub-item-button"]'.</msg>
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:47.556350" elapsed="2.273066"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id=":R1ot1:"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:49.832402" elapsed="0.230825"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:50.070236" level="INFO">Typing text '************' into text field '//input[@id=":R1ot1:"]'.</msg>
+<arg>//input[@id=":R1ot1:"]</arg>
+<arg>************</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:50.066224" elapsed="2.444675"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:52.518900" level="INFO">Clicking button '//button[@id=":R38t1:"]'.</msg>
+<msg time="2024-07-29T15:50:54.419103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:50:54.421336" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button disabled="" type="submit" class="andes-button registration-input-phone__continue andes-button--large andes-button--loud andes-button--disabled" id=":R38t1:"&gt;...&lt;/button&gt; is not clickable at point (718, 448). Other element would receive the click: &lt;div class="registration-input-phone__content"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	ZwWaitLowEventPair [0x00007FFBB39B27FC+2769036]
+	GetHandleVerifier [0x00007FF6C31F9632+30946]
+	(No symbol) [0x00007FF6C31AE3C9]
+	(No symbol) [0x00007FF6C30A6FDA]
+	(No symbol) [0x00007FF6C30FFEEE]
+	(No symbol) [0x00007FF6C30FD962]
+	(No symbol) [0x00007FF6C30FAE7B]
+	(No symbol) [0x00007FF6C30FA095]
+	(No symbol) [0x00007FF6C30EC271]
+	(No symbol) [0x00007FF6C311CA6A]
+	(No symbol) [0x00007FF6C30EBBB6]
+	(No symbol) [0x00007FF6C311CC80]
+	(No symbol) [0x00007FF6C313B041]
+	(No symbol) [0x00007FF6C311C813]
+	(No symbol) [0x00007FF6C30EA6E5]
+	(No symbol) [0x00007FF6C30EB021]
+	GetHandleVerifier [0x00007FF6C332F83D+1301229]
+	GetHandleVerifier [0x00007FF6C333BDB7+1351783]
+	GetHandleVerifier [0x00007FF6C3332A03+1313971]
+	GetHandleVerifier [0x00007FF6C322DD06+245686]
+	(No symbol) [0x00007FF6C31B758F]
+	(No symbol) [0x00007FF6C31B3804]
+	(No symbol) [0x00007FF6C31B3992]
+	(No symbol) [0x00007FF6C31AA3EF]
+	uaw_wcsrchr [0x00007FFBB2E009FC+962364]
+	uaw_wcsrchr [0x00007FFBB2D97BB0+532720]
+	ZwWaitLowEventPair [0x00007FFBB38BC398+1760296]
+</msg>
+<arg>//button[@id=":R38t1:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-29T15:50:52.515897" elapsed="2.357427">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button disabled="" type="submit" class="andes-button registration-input-phone__continue andes-button--large andes-button--loud andes-button--disabled" id=":R38t1:"&gt;...&lt;/button&gt; is not clickable at point (718, 448). Other element would receive the click: &lt;div class="registration-input-phone__content"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	ZwWaitLowEventPair [0x00007FFBB39B27FC+2769036]
+	GetHandleVerifier [0x00007FF6C31F9632+30946]
+	(No symbol) [0x00007FF6C31AE3C9]
+	(No symbol) [0x00007FF6C30A6FDA]
+	(No symbol) [0x00007FF6C30FFEEE]
+	(No symbol) [0x00007FF6C30FD962]
+	(No symbol) [0x00007FF6C30FAE7B]
+	(No symbol) [0x00007FF6C30FA095]
+	(No symbol) [0x00007FF6C30EC271]
+	(No symbol) [0x00007FF6C311CA6A]
+	(No symbol) [0x00007FF6C30EBBB6]
+	(No symbol) [0x00007FF6C311CC80]
+	(No symbol) [0x00007FF6C313B041]
+	(No symbol) [0x00007FF6C311C813]
+	(No symbol) [0x00007FF6C30EA6E5]
+	(No symbol) [0x00007FF6C30EB021]
+	GetHandleVerifier [0x00007FF6C332F83D+1301229]
+	GetHandleVerifier [0x00007FF6C333BDB7+1351783]
+	GetHandleVerifier [0x00007FF6C3332A03+1313971]
+	GetHandleVerifier [0x00007FF6C322DD06+245686]
+	(No symbol) [0x00007FF6C31B758F]
+	(No symbol) [0x00007FF6C31B3804]
+	(No symbol) [0x00007FF6C31B3992]
+	(No symbol) [0x00007FF6C31AA3EF]
+	uaw_wcsrchr [0x00007FFBB2E009FC+962364]
+	uaw_wcsrchr [0x00007FFBB2D97BB0+532720]
+	ZwWaitLowEventPair [0x00007FFBB38BC398+1760296]
+</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//span[@id=":R1ot1:-message"// and @text="O número inserido é inválido."]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-07-29T15:50:54.874321" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-29T15:50:47.553348" elapsed="7.324132">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button disabled="" type="submit" class="andes-button registration-input-phone__continue andes-button--large andes-button--loud andes-button--disabled" id=":R38t1:"&gt;...&lt;/button&gt; is not clickable at point (718, 448). Other element would receive the click: &lt;div class="registration-input-phone__content"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	ZwWaitLowEventPair [0x00007FFBB39B27FC+2769036]
+	GetHandleVerifier [0x00007FF6C31F9632+30946]
+	(No symbol) [0x00007FF6C31AE3C9]
+	(No symbol) [0x00007FF6C30A6FDA]
+	(No symbol) [0x00007FF6C30FFEEE]
+	(No symbol) [0x00007FF6C30FD962]
+	(No symbol) [0x00007FF6C30FAE7B]
+	(No symbol) [0x00007FF6C30FA095]
+	(No symbol) [0x00007FF6C30EC271]
+	(No symbol) [0x00007FF6C311CA6A]
+	(No symbol) [0x00007FF6C30EBBB6]
+	(No symbol) [0x00007FF6C311CC80]
+	(No symbol) [0x00007FF6C313B041]
+	(No symbol) [0x00007FF6C311C813]
+	(No symbol) [0x00007FF6C30EA6E5]
+	(No symbol) [0x00007FF6C30EB021]
+	GetHandleVerifier [0x00007FF6C332F83D+1301229]
+	GetHandleVerifier [0x00007FF6C333BDB7+1351783]
+	GetHandleVerifier [0x00007FF6C3332A03+1313971]
+	GetHandleVerifier [0x00007FF6C322DD06+245686]
+	(No symbol) [0x00007FF6C31B758F]
+	(No symbol) [0x00007FF6C31B3804]
+	(No symbol) [0x00007FF6C31B3992]
+	(No symbol) [0x00007FF6C31AA3EF]
+	uaw_wcsrchr [0x00007FFBB2E009FC+962364]
+	uaw_wcsrchr [0x00007FFBB2D97BB0+532720]
+	ZwWaitLowEventPair [0x00007FFBB38BC398+1760296]
+</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:50:54.880701" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se é possivel adicionar um telefone com caracteres invalidos</doc>
+<status status="FAIL" start="2024-07-29T15:50:47.544350" elapsed="7.337354">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button disabled="" type="submit" class="andes-button registration-input-phone__continue andes-button--large andes-button--loud andes-button--disabled" id=":R38t1:"&gt;...&lt;/button&gt; is not clickable at point (718, 448). Other element would receive the click: &lt;div class="registration-input-phone__content"&gt;...&lt;/div&gt;
+  (Session info: chrome=127.0.6533.72)
+Stacktrace:
+	ZwWaitLowEventPair [0x00007FFBB39B27FC+2769036]
+	GetHandleVerifier [0x00007FF6C31F9632+30946]
+	(No symbol) [0x00007FF6C31AE3C9]
+	(No symbol) [0x00007FF6C30A6FDA]
+	(No symbol) [0x00007FF6C30FFEEE]
+	(No symbol) [0x00007FF6C30FD962]
+	(No symbol) [0x00007FF6C30FAE7B]
+	(No symbol) [0x00007FF6C30FA095]
+	(No symbol) [0x00007FF6C30EC271]
+	(No symbol) [0x00007FF6C311CA6A]
+	(No symbol) [0x00007FF6C30EBBB6]
+	(No symbol) [0x00007FF6C311CC80]
+	(No symbol) [0x00007FF6C313B041]
+	(No symbol) [0x00007FF6C311C813]
+	(No symbol) [0x00007FF6C30EA6E5]
+	(No symbol) [0x00007FF6C30EB021]
+	GetHandleVerifier [0x00007FF6C332F83D+1301229]
+	GetHandleVerifier [0x00007FF6C333BDB7+1351783]
+	GetHandleVerifier [0x00007FF6C3332A03+1313971]
+	GetHandleVerifier [0x00007FF6C322DD06+245686]
+	(No symbol) [0x00007FF6C31B758F]
+	(No symbol) [0x00007FF6C31B3804]
+	(No symbol) [0x00007FF6C31B3992]
+	(No symbol) [0x00007FF6C31AA3EF]
+	uaw_wcsrchr [0x00007FFBB2E009FC+962364]
+	uaw_wcsrchr [0x00007FFBB2D97BB0+532720]
+	ZwWaitLowEventPair [0x00007FFBB38BC398+1760296]
+</status>
+</test>
+<test id="s1-t6" name="Inserir Numero De Telefone Valido" line="36">
+<kw name="Input Valid Phone Number" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id=":R1ot1:"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:50:54.957813" elapsed="0.049824"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>//input[@id=":R1ot1:"]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:55.007637" elapsed="0.260143"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:55.270779" level="INFO">Typing text '11958486914' into text field '//input[@id=":R1ot1:"]'.</msg>
+<arg>//input[@id=":R1ot1:"]</arg>
+<arg>${PHONE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:55.268773" elapsed="0.387528"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:50:55.662676" level="INFO">Clicking button '//button[@id=":R38t1:"]'.</msg>
+<arg>//button[@id=":R38t1:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:50:55.658666" elapsed="0.379546"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-29T15:51:16.057662" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-29T15:50:56.042395" elapsed="20.016265"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//button[@id="hub-item-button"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:51:16.061310" elapsed="0.070171"/>
+</kw>
+<status status="PASS" start="2024-07-29T15:50:54.952576" elapsed="21.179913"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:16.439855" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-29T15:51:16.136485" elapsed="0.303370"/>
+</kw>
+<doc>Verifica se é possivel adicionar um telefone valido</doc>
+<status status="PASS" start="2024-07-29T15:50:54.901754" elapsed="21.540384"/>
+</test>
+<test id="s1-t7" name="Validar Password Em Branco" line="41">
+<kw name="Input Blank Space On Password Register Page" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:16.452540" level="INFO">Clicking button '//*[@id="hub-item-button"]'.</msg>
+<arg>//*[@id="hub-item-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:16.451538" elapsed="1.271752"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="enter-password"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:51:17.726291" elapsed="0.543381"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:18.270907" level="INFO">Clicking button '//button[@id=":R3cp:"]'.</msg>
+<arg>//button[@id=":R3cp:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:18.270907" elapsed="0.605209"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:24.275094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:51:24.276091" level="FAIL">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Mínimo de 8 caracteres com letras e números."]' did not appear in 5 seconds.</msg>
+<arg>//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Mínimo de 8 caracteres com letras e números."]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:51:18.879124" elapsed="5.402447">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Mínimo de 8 caracteres com letras e números."]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-29T15:51:16.449330" elapsed="7.833682">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Mínimo de 8 caracteres com letras e números."]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:24.284112" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se é possivel progredir com a senha em Branco</doc>
+<status status="FAIL" start="2024-07-29T15:51:16.447138" elapsed="7.838974">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Mínimo de 8 caracteres com letras e números."]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t8" name="Inserir Password Invalido" line="46">
+<kw name="Input Invalid Password On Register Page" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="enter-password"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:51:24.293626" elapsed="0.024961"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:24.321103" level="INFO">Typing password into text field '//input[@id="enter-password"]'.</msg>
+<msg time="2024-07-29T15:51:24.499507" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id="enter-password"]</arg>
+<arg>1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:24.320101" elapsed="0.603297"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:24.933345" level="INFO">Typing password into text field '//input[@id="confirm-password"]'.</msg>
+<msg time="2024-07-29T15:51:25.187004" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id="confirm-password"]</arg>
+<arg>1234</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:24.929122" elapsed="0.528489"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:25.459598" level="INFO">Clicking button '//button[@id=":R3cp:"]'.</msg>
+<arg>//button[@id=":R3cp:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:25.458605" elapsed="0.300362"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:31.145198" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:51:31.146201" level="FAIL">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Sem sequências, como 1234 ou ABCD."]' did not appear in 5 seconds.</msg>
+<arg>//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Sem sequências, como 1234 ou ABCD."]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:51:25.761969" elapsed="5.392230">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Sem sequências, como 1234 ou ABCD."]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-29T15:51:24.291526" elapsed="6.864672">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Sem sequências, como 1234 ou ABCD."]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:31.159585" elapsed="0.001000"/>
+</kw>
+<doc>Verifica se é possivel adicionar uma senha invalida</doc>
+<status status="FAIL" start="2024-07-29T15:51:24.289369" elapsed="6.876219">Element '//p[@class="input-password-card__rule-wording input-password-card__rule-wording--error" and @text="Sem sequências, como 1234 ou ABCD."]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t9" name="Inserir Password Valido" line="51">
+<kw name="Input Valid Password On Register Page" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="enter-password"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-29T15:51:31.186819" elapsed="0.109893"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:31.303946" level="INFO">Typing password into text field '//input[@id="enter-password"]'.</msg>
+<msg time="2024-07-29T15:51:31.415241" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id="enter-password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:31.299940" elapsed="0.520346"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:31.826281" level="INFO">Typing password into text field '//input[@id="confirm-password"]'.</msg>
+<msg time="2024-07-29T15:51:32.019743" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@id="confirm-password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:31.823280" elapsed="0.656761"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:32.487029" level="INFO">Clicking button '//button[@id=":R3cp:"]'.</msg>
+<arg>//button[@id=":R3cp:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-29T15:51:32.484024" elapsed="0.284576"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:43.281055" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:51:43.283053" level="FAIL">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</msg>
+<arg>//a[@data-link-id="login" and @text="Entre"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:51:32.770599" elapsed="10.527842">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-07-29T15:51:31.183824" elapsed="12.118614">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:43.307468" elapsed="0.000982"/>
+</kw>
+<doc>Verifica se é possivel adicionar uma senha valida</doc>
+<status status="FAIL" start="2024-07-29T15:51:31.174830" elapsed="12.142621">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t10" name="Login: Campo De Usuario Em Branco" line="56">
+<kw name="Login With Blank Email" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:52.191856" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:51:52.197859" level="FAIL">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</msg>
+<arg>//a[@data-link-id="login" and @text="Entre"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:51:43.364618" elapsed="8.843239">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[@data-link-id="login" and @text="Entre"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:52.210253" elapsed="0.000998"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//input[@id="user_id"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:52.213259" elapsed="0.000992"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@id=":Rajhh:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:52.217249" elapsed="0.003002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//div[@id="identification-message"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:52.224253" elapsed="0.003539"/>
+</kw>
+<status status="FAIL" start="2024-07-29T15:51:43.359618" elapsed="8.871171">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:52.235791" elapsed="0.001001"/>
+</kw>
+<doc>Verifica se é possivel progredir com o campo de usuario em branco na pagina de Login</doc>
+<status status="FAIL" start="2024-07-29T15:51:43.338625" elapsed="8.902169">Element '//a[@data-link-id="login" and @text="Entre"]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t11" name="Login: Campo de Usuario Invalido" line="61">
+<kw name="Login With Invalid Email" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:57.991555" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-29T15:51:57.993554" level="FAIL">Element '//input[@id="user_id"]' did not appear in 5 seconds.</msg>
+<arg>//input[@id="user_id"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2024-07-29T15:51:52.271921" elapsed="5.729915">Element '//input[@id="user_id"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//input[@id="user_id"]</arg>
+<arg>gustavo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:58.004843" elapsed="0.000999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@id=":Rajhh:"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:58.006841" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>//div[@id="identification-message" and @text="Revise o seu e-mail ou usuário."]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:58.012183" elapsed="0.001006"/>
+</kw>
+<status status="FAIL" start="2024-07-29T15:51:52.265560" elapsed="5.747629">Element '//input[@id="user_id"]' did not appear in 5 seconds.</status>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2024-07-29T15:51:58.018463" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se é possivel progredir com o campo de usuario invalido na pagina de Login</doc>
+<status status="FAIL" start="2024-07-29T15:51:52.254799" elapsed="5.769009">Element '//input[@id="user_id"]' did not appear in 5 seconds.</status>
+</test>
+<kw name="End Session" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-07-29T15:51:58.802531" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-07-29T15:51:58.314921" elapsed="0.492610"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-29T15:51:58.814532" elapsed="7.976925"/>
+</kw>
+<status status="PASS" start="2024-07-29T15:51:58.306816" elapsed="8.485742"/>
+</kw>
+<doc>A test suite for register and login on Mercado Livre Website.
+
+Keywords are imported from the resource file</doc>
+<status status="FAIL" start="2024-07-29T15:49:57.072276" elapsed="129.720282"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="8" skip="0" id="s1" name="TestCase">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
