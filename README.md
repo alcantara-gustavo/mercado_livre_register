@@ -103,19 +103,22 @@ Os testes cobrem as funcionalidades de:
     -   Clicar no botão Continuar.
     -   **Resultado Esperado:** O Usuário consegue cadastrar a senha com sucesso e retorna para a pagina home do mercado livre.
 
-10.  **Login: Campo De Usuário Em Branco** 
+10.  **Login: Campo De Usuário Em Branco**
+    
     -   Acessar a Home Page do Mercado Livre.
     -   Deixar o campo de usuário em branco.
     -   Clicar no botão Continuar.
-    -   **Resultado Esperado:** O Usuário não consegue realizar login e uma mensagem de erro aparece solicitando o preenchimento do campo.
+    -  **Resultado Esperado:** O Usuário não consegue realizar login e uma mensagem de erro aparece solicitando o preenchimento do campo.
 
-11.  **Login: Campo de Usuário Invalido**
+12.  **Login: Campo de Usuário Invalido**
+    
     -   Acessar a Home Page do Mercado Livre.
     -   Preencher o campo de usuário com dados inválidos.
     -   Clicar no botão Continuar.
     -   **Resultado Esperado:** O Usuário não consegue realizar login e uma mensagem de erro aparece solicitando o preenchimento do campo com credenciais validas.
 
-12.  **Login: Campo de Usuário Válido**
+13.  **Login: Campo de Usuário Válido**
+    
     -   Acessar a Home Page do Mercado Livre.
     -   Preencher o campo de usuário com dados válidos.
     -   Clicar no botão Continuar.
@@ -123,7 +126,7 @@ Os testes cobrem as funcionalidades de:
     -   Clicar no botão Continuar
     -   Preencher o campo com o código enviado através da autenticação selecionada
     -   **Resultado Esperado:** O Usuário consegue realizar o login e retorna para a pagina home do mercado livre.
-    - 
+    
 ## Pré-requisitos
 
 Para executar os testes, é necessário ter:
